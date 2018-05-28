@@ -1,0 +1,17 @@
+﻿@model Invitees
+@{
+    ViewData["Title"] = "Thanks";
+}
+<p>
+    <h1>Thank you, @Model.Name!</h1>
+    @if (Model.will_attend == true)
+    {
+        @:It's great that you're coming. The drinks are already in the fridge!
+}
+    else
+    {
+        @:Sorry to hear that you can't make it, but thanks for letting us know.
+}
+</p>
+Click <a class="nav-link" asp-action="ListInvites">here</a>
+to see who is coming.
